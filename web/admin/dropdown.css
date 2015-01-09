@@ -1,0 +1,35 @@
+#nav {position:relative; z-index:100;}
+
+/* float the list to make it horizontal and a relative positon so that you can control the dropdown menu positon */
+#nav li {float:left; position:relative;}
+/* style the links for the top level */
+
+/* hide the sub levels and give them a positon absolute so that they take up no room */
+#nav ul ul {visibility:hidden; position:absolute; height:0; top:31px; left:2px; width:185px; padding-top: 10px;}
+
+/* style the table so that it takes no ppart in the layout - required for IE to work */
+#nav table {position:absolute; top:0; left:0; border-collapse:collapse;}
+
+/* style the second level links */
+#nav ul ul li { background: #b4ec7a; padding: 5px 5px 0 5px; width: 175px; height: auto; border-right: 0; text-align: left;}
+
+/** html #nav ul ul li { width: 134px; }*/
+
+#nav ul ul a { color: #565656; height: auto; padding:7px 7px 7px 14px; width: 152px; border-bottom: 1px solid #90d34c; text-transform: none; display: block; float: left;}
+
+#nav ul ul .topsub_last a { border: none; }
+
+#nav ul ul .topsub_last { padding: 5px; }
+
+#nav a:hover {  }
+#nav :hover > a { }
+
+/* make the second level visible when hover on first level list OR link */
+#nav ul li:hover ul, #nav ul a:hover ul{visibility:visible; z-index: 230030303}
+/* keep the third level hidden when you hover on first level list OR link */
+#nav ul :hover ul ul{visibility:hidden;}
+/* make the third level visible when you hover over second level list OR link */
+#nav ul :hover ul :hover ul{ visibility:visible; z-index: 230030303}
+#nav ul ul a:hover, #nav ul ul :hover > a { background-color: #90d34c; }
+
+#nav ul ul a:hover { background-color: #90d34c; }
